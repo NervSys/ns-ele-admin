@@ -1,0 +1,115 @@
+2019-06-20 14:43:57
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php on line 389
+Message: Class \app\install.php does not exist
+
+Peak: 2MB
+Memory: 2MB
+Duration: 85.0661ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php" on line 188
+
+
+2019-06-20 14:44:50
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php on line 389
+Message: Class \app\install.php does not exist
+
+Peak: 2MB
+Memory: 2MB
+Duration: 1.9011ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php" on line 188
+
+
+2019-06-20 14:46:50
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php on line 389
+Message: Class \app\install.php does not exist
+
+Peak: 2MB
+Memory: 2MB
+Duration: 2.4021ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php" on line 188
+
+
+2019-06-20 16:42:02
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php on line 389
+Message: Class \app\install.php does not exist
+
+Peak: 2MB
+Memory: 2MB
+Duration: 2.61ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php" on line 188
+
+
+2019-06-20 16:42:19
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php on line 389
+Message: Class \app\install.php does not exist
+
+Peak: 2MB
+Memory: 2MB
+Duration: 2.0549ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php" on line 188
+
+

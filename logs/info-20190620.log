@@ -1,0 +1,24 @@
+2019-06-20 16:43:24
+Info: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\parser\trustzone.php on line 108
+Message: \app\user\login::login: TrustZone mismatch [name, pwd]
+
+Peak: 2MB
+Memory: 2MB
+Duration: 318.778ms
+
+Param: 
+{
+    "cmd": "user/login-login"
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\handler\operator.php(110): core\parser\trustzone::verify('\\app\\user\\login', 'login')
+#1 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php(222): core\handler\operator::exec_cgi()
+#2 E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php(28): core\system::boot()
+#3 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\app\api.php" on line 28
+"core\handler\operator::exec_cgi" called in "E:\phpstudy\PHPTutorial\WWW\www\oneGarden\core\system.php" on line 222
+
+
