@@ -1,0 +1,172 @@
+2019-06-21 11:52:00
+Info: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\parser\trustzone.php on line 108
+Message: \app\user\login::login: TrustZone mismatch [name, pwd]
+
+Peak: 2MB
+Memory: 2MB
+Duration: 282.9151ms
+
+Param: 
+{
+    "cmd": "user/login-login"
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php(110): core\parser\trustzone::verify('\\app\\user\\login', 'login')
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(222): core\handler\operator::exec_cgi()
+#2 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#3 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\handler\operator::exec_cgi" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 222
+
+
+2019-06-21 11:52:06
+Info: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\parser\trustzone.php on line 108
+Message: \app\user\login::login: TrustZone mismatch [name, pwd]
+
+Peak: 2MB
+Memory: 2MB
+Duration: 271.6329ms
+
+Param: 
+{
+    "cmd": "user/login-login"
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php(110): core\parser\trustzone::verify('\\app\\user\\login', 'login')
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(222): core\handler\operator::exec_cgi()
+#2 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#3 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\handler\operator::exec_cgi" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 222
+
+
+2019-06-21 11:59:51
+Info: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\parser\trustzone.php on line 108
+Message: \app\user\login::login: TrustZone mismatch [name, pwd]
+
+Peak: 2MB
+Memory: 2MB
+Duration: 345.4809ms
+
+Param: 
+{
+    "cmd": "user/login-login"
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php(110): core\parser\trustzone::verify('\\app\\user\\login', 'login')
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(222): core\handler\operator::exec_cgi()
+#2 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#3 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\handler\operator::exec_cgi" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 222
+
+
+2019-06-21 14:22:16
+Info: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\parser\trustzone.php on line 108
+Message: \app\user\login::login: TrustZone mismatch [name, pwd]
+
+Peak: 2MB
+Memory: 2MB
+Duration: 465.3959ms
+
+Param: 
+{
+    "cmd": "user/login-login",
+    "username": "admin",
+    "password": "123456"
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php(110): core\parser\trustzone::verify('\\app\\user\\login', 'login')
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(222): core\handler\operator::exec_cgi()
+#2 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#3 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\handler\operator::exec_cgi" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 222
+
+
+2019-06-21 14:27:28
+Info: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\parser\trustzone.php on line 108
+Message: \app\user\login::login: TrustZone mismatch [name, pwd]
+
+Peak: 2MB
+Memory: 2MB
+Duration: 11.0641ms
+
+Param: 
+{
+    "cmd": "user/login-login",
+    "username": "admin",
+    "password": "123456"
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php(110): core\parser\trustzone::verify('\\app\\user\\login', 'login')
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(222): core\handler\operator::exec_cgi()
+#2 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#3 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\handler\operator::exec_cgi" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 222
+
+
+2019-06-21 14:27:41
+Info: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\parser\trustzone.php on line 108
+Message: \app\user\login::login: TrustZone mismatch [name, pwd]
+
+Peak: 2MB
+Memory: 2MB
+Duration: 6.0201ms
+
+Param: 
+{
+    "cmd": "user/login-login"
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php(110): core\parser\trustzone::verify('\\app\\user\\login', 'login')
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(222): core\handler\operator::exec_cgi()
+#2 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#3 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\handler\operator::exec_cgi" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 222
+
+
+2019-06-21 14:28:56
+Info: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\parser\trustzone.php on line 108
+Message: \app\user\login::login: TrustZone mismatch [name, pwd]
+
+Peak: 2MB
+Memory: 2MB
+Duration: 6.655ms
+
+Param: 
+{
+    "cmd": "user/login-login"
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php(110): core\parser\trustzone::verify('\\app\\user\\login', 'login')
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(222): core\handler\operator::exec_cgi()
+#2 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#3 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\handler\operator::exec_cgi" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 222
+
+

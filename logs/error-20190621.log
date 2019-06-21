@@ -1,0 +1,874 @@
+2019-06-21 14:29:32
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 24.1048ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:32:22
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 11.682ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:34:16
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 18.9841ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:37:50
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 8.605ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:39:40
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 9.021ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:40:25
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 16.139ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:40:46
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 7.4739ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:42:14
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 10.7319ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:46:57
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 18.9619ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:47:21
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 26.0348ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:49:02
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 224.2401ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:51:02
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 36.7858ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:51:38
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQL: INSERT INTO `log` (`text`, `postion`, `created_at`) VALUES (:text_374efb91, :postion_27d15e62, :created_at_f70496ee). 
+Error:SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected
+
+Peak: 2MB
+Memory: 2MB
+Duration: 61.933ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:52:14
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 9.8591ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:52:35
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 8.7049ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:54:37
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 20.4449ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:57:42
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 15.3949ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:58:04
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQL: CREATE TABLE IF NOT EXISTS `admin_permissions` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `model_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `control_real_name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `idx_admin_permissions_deleted_at` (`deleted_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+CREATE TABLE IF NOT EXISTS `admin_roles` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `info` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `score` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sulg` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `idx_admin_roles_deleted_at` (`deleted_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `admin_users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `logo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `age` int(11) NOT NULL DEFAULT '0',
+  `birthday` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `first_role_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `province` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `city` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `area` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pwd` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `code` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(11) DEFAULT '1',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uix_admin_users_email` (`email`),
+  KEY `idx_admin_users_deleted_at` (`deleted_at`),
+  KEY `phone` (`phone`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+. 
+Error:SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected
+
+Peak: 2MB
+Memory: 2MB
+Duration: 9.2812ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 14:59:12
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 11.7459ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:00:41
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 7.0899ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:01:10
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 7.1561ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:04:07
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 8.503ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:05:03
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: Call to undefined method db\install::exec()
+
+Peak: 2MB
+Memory: 2MB
+Duration: 14.112ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:09:04
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 11.1878ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:09:36
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 9.9812ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:09:42
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 7.2339ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:09:59
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 194.8612ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:12:29
+Error: ErrorException caught in E:\phpstudy\PHPTutorial\WWW\www\basis\app\user\login.php on line 31
+Message: Array to string conversion
+
+Peak: 2MB
+Memory: 2MB
+Duration: 32.7621ms
+
+Param: 
+{
+    "cmd": "user/login-login",
+    "username": "admin",
+    "password": "123456"
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\app\user\login.php(31): core\handler\error::error_handler(256, 'Array to string...', 'E:\\phpstudy\\PHP...', 31, Array)
+#1 [internal function]: app\user\login->login('admin', '123456')
+#2 E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php(253): forward_static_call_array(Array, Array)
+#3 E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php(113): core\handler\operator::build_caller('user/login', Object(app\user\login), 'login')
+#4 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(222): core\handler\operator::exec_cgi()
+#5 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#6 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\handler\operator::exec_cgi" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 222
+"core\handler\operator::build_caller" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php" on line 113
+"forward_static_call_array" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\handler\operator.php" on line 253
+"app\user\login->login" called
+"core\handler\error::error_handler" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\user\login.php" on line 31
+
+
+2019-06-21 15:36:49
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 23.8268ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:37:15
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 10.8221ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:39:18
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 11.3962ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:39:36
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 8.523ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:42:28
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 8.6522ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:42:55
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+Peak: 2MB
+Memory: 2MB
+Duration: 7.7698ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+
+2019-06-21 15:47:54
+Error: Exception caught in E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php on line 389
+Message: SQL: INSERT INTO `log` (`text`, `postion`, `created_at`) VALUES (:text_6f249dc0, :postion_1fafd853, :created_at_9bf48e9d). 
+Error:SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.log' doesn't exist
+
+Peak: 2MB
+Memory: 2MB
+Duration: 10.9789ms
+
+Param: 
+{
+    "cmd": ""
+}
+
+Trace: 
+#0 E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php(188): core\system::initialize_sys()
+#1 E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php(28): core\system::boot()
+#2 {main}
+
+Backtrace: 
+"core\system::boot" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\app\api.php" on line 28
+"core\system::initialize_sys" called in "E:\phpstudy\PHPTutorial\WWW\www\basis\core\system.php" on line 188
+
+

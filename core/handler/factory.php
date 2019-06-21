@@ -30,6 +30,10 @@ class factory extends system
     //Reflection pool
     private static $reflection = [];
 
+    protected static $newUserInfo = [];
+    
+    protected static $Permission = [];
+
     /**
      * Get original object from called class with alias
      * Defined by class created from "as"

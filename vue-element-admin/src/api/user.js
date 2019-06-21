@@ -1,8 +1,9 @@
 import request from '@/utils/request'
+import domain from '@/utils/domain.js'
 
 export function login(data) {
   return request({
-    url: '/user/login',
+    url: domain.baseUrl + '?c=user/login-login',
     method: 'post',
     data
   })
@@ -10,7 +11,7 @@ export function login(data) {
 
 export function getInfo(token) {
   return request({
-    url: '/user/info',
+    url: domain.baseUrl + '?c=user/login-getUserInfo',
     method: 'get',
     params: { token }
   })
@@ -18,7 +19,7 @@ export function getInfo(token) {
 
 export function logout() {
   return request({
-    url: '/user/logout',
+    url: domain.baseUrl + '/user/logout',
     method: 'post'
   })
 }

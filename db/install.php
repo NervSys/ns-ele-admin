@@ -6,8 +6,12 @@
  * Time: 下午 14:27
  */
 namespace db;
+use app\model\log;
+use app\model\logs;
 use ext\file;
 use app\library\model;
+use ext\mine;
+
 class install extends model
 {
     const SQL_PATH = __DIR__ . '/pending';
@@ -18,10 +22,8 @@ class install extends model
         foreach ($files as $file) {
             $ret  = $this->exec(file_get_contents($file));
             $name = basename($file);
-            echo -1 !== $ret
-                ? '"' . $name . '" import succeed!'
-                : '"' . $name . '" import FAILED!!!';
-            echo PHP_EOL;
+            $ret ?  : logs::new()->myLog("初始化数据表失败");
+
         }
     }
 }

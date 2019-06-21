@@ -6,14 +6,14 @@ use ext\mine;
 
 
 /**
- * 权限用户模型
+ * 管理系统用户模型
  * Class adminUsers
  * @package model
  */
 class adminUsers extends model
 {
     /*定义当前模型的数据表名称*/
-    private static $table = 'admin_user';
+    private static $table = 'admin_users';
 
     /**
      * 判断这个登录用户是否存在

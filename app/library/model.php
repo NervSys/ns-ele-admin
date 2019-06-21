@@ -15,7 +15,8 @@ use ext\pdo_mysql;
  * Class model
  * @package app\library
  */
-class model extends pdo_mysql{
+class model extends pdo_mysql
+{
 
     public function __construct()
     {

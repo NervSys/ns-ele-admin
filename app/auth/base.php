@@ -7,18 +7,20 @@
  */
 namespace app\auth;
 
+use app\library\cache;
+use app\model\adminPermission;
+use app\model\adminUsers;
+use app\model\logs;
 use core\handler\factory;
+use ext\auth;
 use ext\crypt;
-use ext\redis_cache;
 use ext\errno;
-use ext\mine;
-use model\adminPermission;
-use model\adminUsers;
+
 class base extends factory
 {
     /*初始化项目token加密*/
-    private $key = 'shopping_card';
-    private $nonce = 'shopping_card_max';
+    private $key = 'admin_onegarden_key';
+    private $nonce = 'admin_onegarden';
     private $outtime = 30000;
     /* 登录超时 */
     private $loginTimeOut = 24*3600*3;
@@ -34,11 +36,11 @@ class base extends factory
      */
     public function generateToken(int $id,$currentappversion = '1.1'):string
     {
-        $token = crypt::new()->get_key().'==='.$id.'==='.$currentappversion.'==='.time().'==='.'shopping_card';
+        $token = crypt::new()->get_key().'==='.$id.'==='.$currentappversion.'==='.time().'==='.$this->key;
 
         $access_token = crypt::new()->encrypt($token,$this->key);
 
-        $data = redis_cache::new()->connect()->set($access_token,[$id],$this->loginTimeOut);
+        cache::new()->set($access_token,[$id],$this->loginTimeOut);
 
         return $access_token;
     }
@@ -56,8 +58,7 @@ class base extends factory
 
         /*验证登陆是否超时*/
         $loginTime = $userId[3] + $this->loginTimeOut;
-//        var_dump($loginTime);
-//        var_dump(time());exit();
+
         if(time() > $loginTime){
             errno::set(40030,40030);
         }
@@ -75,16 +76,17 @@ class base extends factory
 
         $sign = sha1($sign);
         if($sign != $signature){
-            mine::new()->myLog('签名错误'.'sgin:'.$sign.'------------------------'.'get_sgin:'.$signature);
+            logs::new()->myLog('签名错误'.'sgin:'.$sign.'------------------------'.'get_sgin:'.$signature);
             errno::set(40001,40001);
         }
 
-        $redis_ceche_token = redis_cache::new()->connect()->get($token);
+        $redis_ceche_token = cache::new()->get($token);
 
         if(!$redis_ceche_token){
             errno::set(40030,40030);
         }else{
             /*获取用户信息*/
+
             $userData = adminUsers::new()->getIdFirstUser(intval($redis_ceche_token[0]));
 
             if(is_array($userData) && $userData){
@@ -92,7 +94,7 @@ class base extends factory
                 /*初始化权限*/
                 self::instantiationPermission();
             }else{
-                mine::new()->myLog('授权时未发现用户'.$token);
+                logs::new()->myLog('授权时未发现用户'.$token);
                 errno::set(40002,40002);
             }
         }

@@ -1,5 +1,6 @@
 <?php
 namespace ext;
+use app\model\logs;
 use core\handler\factory;
 
 
@@ -59,28 +60,11 @@ class mine extends factory
             40034=> "名字不能小于两位或者大于五位",
             40035=> "该激活码不能兑换",
             40036=> "兑换失败,请联系相关客服",
-            40037=> "账号只能由数字英文字符组成，不小于6个单温或大于20个单位",
+            40037=> "账号只能由数字英文字符组成，不小于6个单位或大于20个单位",
         ];
 
         return $msg[$code];
     }
-
-    /**
-     * 项目log函数
-     * @param $text
-     * @param string $type
-     */
-    public function myLog(string $text,$type='')
-    {
-        pdo_mysql::new()->connect()
-            ->insert('log')
-            ->value([
-                'text'=>$text,
-                'postion'=>$type,
-                'created_at'=>date('Y-m-d H:i:s',time())
-            ])->execute();
-    }
-
 
     /**
      * 错误码
@@ -102,7 +86,6 @@ class mine extends factory
      */
     public function getPayPwdKey(string $pwd,string $key = ''):string
     {
-        if(empty($key)) $key = $this->key;
         $pwd_key = md5($pwd.$key);
         return $pwd_key;
     }
@@ -413,9 +396,6 @@ class mine extends factory
         }
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $output = curl_exec($curl);
-        if ($output === false) {
-            mine::new()->my_log('Curl error: ' . curl_error($curl).". url:".$url);
-        }
 
         curl_close($curl);
         return $output;
@@ -460,7 +440,7 @@ class mine extends factory
         curl_close($curl);
 
         if ($err) {
-            mine::new()->my_log( "cURL Error #:" . $err);
+           logs::new()->my_log( "cURL Error #:" . $err);
         } else {
             return $response;
         }
