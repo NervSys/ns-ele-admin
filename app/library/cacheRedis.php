@@ -7,6 +7,7 @@
  */
 namespace app\library;
 
+use ext\conf;
 use ext\redis_cache;
 
 /**
@@ -14,10 +15,10 @@ use ext\redis_cache;
  * Class model
  * @package app\library
  */
-class cache extends redis_cache {
+class cacheRedis extends redis_cache {
 
     public function __construct()
     {
-        $this->instance = $this->config($this->get('redis'))->connect()->get_redis();
+        $this->instance = $this->config(conf::get("redis"))->connect()->get_redis();
     }
 }

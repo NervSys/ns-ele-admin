@@ -12,16 +12,17 @@ use ext\mine;
 class adminPermission extends model
 {
     /*定义当前模型的数据表名称*/
-    private static $table = 'admin_permission';
+    private static $table = 'admin_permissions';
 
     /**
      * 获取权限
      * @return array
      */
-    public function getData():array
+    public function getData(array $where):array
     {
         $data = $this->select(self::$table)
-            ->where(['status',1])
+            ->where($where)
+            ->field("id,created_at,name,model_name,control_real_name")
             ->fetch();
         if(empty($data)) mine::new()->myLog("获取权限失败",'permission');
         return $data;

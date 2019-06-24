@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS `admin_users` (
   `pwd` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `code` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` int(11) DEFAULT '1',
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `uix_admin_users_email` (`email`),
   KEY `idx_admin_users_deleted_at` (`deleted_at`),

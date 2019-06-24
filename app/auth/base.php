@@ -7,21 +7,25 @@
  */
 namespace app\auth;
 
-use app\library\cache;
 use app\model\adminPermission;
 use app\model\adminUsers;
 use app\model\logs;
+use app\redis\redisCache;
 use core\handler\factory;
 use ext\auth;
 use ext\crypt;
 use ext\errno;
 
+
+/**
+ * auth 基类函数 用户确认用户登陆
+ * Class base
+ * @package app\auth
+ */
 class base extends factory
 {
     /*初始化项目token加密*/
     private $key = 'admin_onegarden_key';
-    private $nonce = 'admin_onegarden';
-    private $outtime = 30000;
     /* 登录超时 */
     private $loginTimeOut = 24*3600*3;
 
@@ -34,13 +38,22 @@ class base extends factory
      * @return string
      * @throws \RedisException
      */
-    public function generateToken(int $id,$currentappversion = '1.1'):string
+    public function generateToken(int $id,string $tokenOid,$currentappversion = '1.1'):string
     {
         $token = crypt::new()->get_key().'==='.$id.'==='.$currentappversion.'==='.time().'==='.$this->key;
-
         $access_token = crypt::new()->encrypt($token,$this->key);
-
-        cache::new()->set($access_token,[$id],$this->loginTimeOut);
+        /* 设置token */
+        $setStringBool = redisCache::new()->setString($access_token,$id,$this->loginTimeOut);
+        if($setStringBool === true){
+            /* 当token设置从成功，在用户元素上保存当此用户的登陆token 。并且删除上次登陆的token 避免造成redis token过多，与拥有多个登陆token同时存在*/
+            $saveTokenBool = adminUsers::new()->saveToken($id,$access_token);
+            if ($saveTokenBool === true) {
+                /* 删除token */
+                redisCache::new()->delString($tokenOid);
+            }else{
+                logs::new()->myLog('设置token失败：'.$access_token,"token");
+            }
+        }
 
         return $access_token;
     }
@@ -50,9 +63,12 @@ class base extends factory
      * @param string $token
      * @return array
      */
-    public function releaseToken(string $token,string $nonce,string $timestamp,string $signature)
+    public function releaseToken()
     {
-
+        $token = $_SERVER['HTTP_X_TOKEN'];
+        if (empty($token)) {
+            errno::set(40002,40002);
+        }
         $releaseToken = crypt::new()->decrypt($token,$this->key);
         $userId = explode('===',$releaseToken);
 
@@ -60,39 +76,27 @@ class base extends factory
         $loginTime = $userId[3] + $this->loginTimeOut;
 
         if(time() > $loginTime){
-            errno::set(40030,40030);
+            errno::set(40013,40013);
         }
 
-        /*验证请求是否超时*/
-        if((time() - $timestamp) > $this->outtime){
-            errno::set(40031,40031);
-        }
         /* 加密字符是否违法*/
-        if($nonce != $this->nonce){
+        if($userId[4] != $this->key){
             errno::set(40001,40001);
         }
 
-        $sign = $token.$nonce.$timestamp;
-
-        $sign = sha1($sign);
-        if($sign != $signature){
-            logs::new()->myLog('签名错误'.'sgin:'.$sign.'------------------------'.'get_sgin:'.$signature);
-            errno::set(40001,40001);
-        }
-
-        $redis_ceche_token = cache::new()->get($token);
+        $redis_ceche_token = redisCache::new()->getString($token);
 
         if(!$redis_ceche_token){
             errno::set(40030,40030);
         }else{
             /*获取用户信息*/
 
-            $userData = adminUsers::new()->getIdFirstUser(intval($redis_ceche_token[0]));
+            $userData = adminUsers::new()->getIdFirstUser(intval($redis_ceche_token));
 
             if(is_array($userData) && $userData){
                 self::$newUserInfo = $userData;
                 /*初始化权限*/
-                self::instantiationPermission();
+                if (empty(self::$Permission)) self::instantiationPermission();
             }else{
                 logs::new()->myLog('授权时未发现用户'.$token);
                 errno::set(40002,40002);
@@ -106,12 +110,15 @@ class base extends factory
     public static function instantiationPermission()
     {
         /*获取数据库权限记录*/
-        $adminPermissionData = adminPermission::new()->getData();
+        $adminPermissionData = adminPermission::new()->getData(['status',1]);
         if(!empty($adminPermissionData)){
             foreach ($adminPermissionData as $key=>$value){
                 /*将权限添载入系统*/
-                self::$Permission[$value['model_name'].'_'.$value['control_real_name']] = new auth($value['model_name'].'_'.$value['control_real_name'],$value['control_name']);
+                self::$Permission[$value['model_name'].'_'.$value['control_real_name']] = new auth($value['model_name'].'_'.$value['control_real_name'],$value['name']);
             }
+
         }
     }
+
+
 }

@@ -29,9 +29,9 @@ class factory extends system
 
     //Reflection pool
     private static $reflection = [];
-
+    /* 用户信息 */
     protected static $newUserInfo = [];
-    
+    /* 所有权限进行位移记录 */
     protected static $Permission = [];
 
     /**

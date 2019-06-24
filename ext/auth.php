@@ -27,17 +27,17 @@ class auth extends factory
      * 权限名称
      * @var string
      */
-    protected $authName;
+    public $authName;
     /**
      * 权限详细信息
      * @var string
      */
-    protected $authMessage;
+    public $authMessage;
     /**
      * 权限值
      * @var int 2的n次方
      */
-    protected $authValue;
+    public $authValue;
 
     /**
      * 构造函数

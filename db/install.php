@@ -22,7 +22,7 @@ class install extends model
         foreach ($files as $file) {
             $ret  = $this->exec(file_get_contents($file));
             $name = basename($file);
-            $ret ?  : logs::new()->myLog("初始化数据表失败");
+            $ret ? "" : "";
 
         }
     }

@@ -144,6 +144,22 @@ class adminUsers extends model
     }
 
     /**
+     * 修改用户登陆的token
+     * @param int $id
+     * @param string $token
+     * @return bool
+     */
+    public function saveToken(int $id,string $token):bool
+    {
+        $bool = $this->update(self::$table)
+            ->where(["id",$id])
+            ->value([
+                "token"=>$token
+            ])->execute();
+        return $bool;
+    }
+
+    /**
      * 根据用户id、页数、每页条数获取数据
      * @param array $where
      * @param int $page
