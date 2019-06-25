@@ -19,7 +19,7 @@ export function getInfo(token) {
 
 export function logout() {
   return request({
-    url: domain.baseUrl + '/user/logout',
+    url: domain.baseUrl + '?c=user/login-logout',
     method: 'post'
   })
 }

@@ -134,7 +134,7 @@ class upload extends factory
      *
      * @return array
      */
-    public function save(string $to = 'upload'): array
+    public function save(string $to = 'app/upload'): array
     {
         //Check upload error
         if (isset($this->file['error'])) {

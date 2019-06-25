@@ -89,7 +89,7 @@ class adminUsers extends model
      * @param int $role_id
      * @return bool
      */
-    public function createUser(string $name,string $pwd,string $code,string $company,string $logo,string $province,string $city,int $role_id,string $phone,string $email):bool
+    public function createUser(string $name,string $pwd,string $code,string $company,string $logo,string $province,string $city,string $role_id,string $phone,string $email):bool
     {
         $data = $this->insert(self::$table)
             ->value([
@@ -124,21 +124,38 @@ class adminUsers extends model
      * @param int $status
      * @return bool
      */
-    public function saveUser(int $id,string $pwd,string $code,string $company,string $logo,string $province,string $city,string $phone,string $email)
+    public function saveUser(int $id,string $pwd,string $code,string $role_id,string $logo,string $province,string $city,string $phone,string $email)
     {
-        $data = $this->update(self::$table)
-            ->where(['id',$id])
-            ->value([
-                "pwd"=>mine::new()->createPwdAccount($code,$pwd),
-                "company"=>$company,
-                "logo"=>$logo,
-                "province"=>$province,
-                "city"=>$city,
-                "ip"=>self::get_ip(),
-                "updated_at"=>date('Y-m-d H:i:s',time()),
-                "phone"=>$phone,
-                "email"=>$email
-            ])->execute();
+        if($pwd == "******"){
+            $data = $this->update(self::$table)
+                ->where(['id',$id])
+                ->value([
+                    "role_id"=>$role_id,
+                    "logo"=>$logo,
+                    "province"=>$province,
+                    "city"=>$city,
+                    "ip"=>self::get_ip(),
+                    "updated_at"=>date('Y-m-d H:i:s',time()),
+                    "phone"=>$phone,
+                    "email"=>$email
+                ])->execute();
+
+        }else{
+            $data = $this->update(self::$table)
+                ->where(['id',$id])
+                ->value([
+                    "pwd"=>mine::new()->createPwdAccount($code,$pwd),
+                    "role_id"=>$role_id,
+                    "logo"=>$logo,
+                    "province"=>$province,
+                    "city"=>$city,
+                    "ip"=>self::get_ip(),
+                    "updated_at"=>date('Y-m-d H:i:s',time()),
+                    "phone"=>$phone,
+                    "email"=>$email
+                ])->execute();
+
+        }
 
         return $data;
     }
@@ -180,6 +197,19 @@ class adminUsers extends model
     }
 
     /**
+     * 获取所有管理员
+     * @return array
+     */
+    public function getDataAll():array
+    {
+        $data = $this->select(self::$table)
+            ->where(["status",1])
+            ->order(['id'=>'desc'])
+            ->fetch();
+
+        return $data;
+    }
+    /**
      * 删除
      * @param int $int
      * @return array
@@ -188,7 +218,10 @@ class adminUsers extends model
     {
         $data = $this->update(self::$table)
             ->where(['id',$id])
-            ->value(["status"=>0])
+            ->value([
+                "status"=>0,
+                "deleted_at"=>date("Y-m-d H:i:s",time())
+            ])
             ->execute();
         return $data;
     }
@@ -202,7 +235,10 @@ class adminUsers extends model
     {
         $data = $this->update(self::$table)
             ->where(['id',$id])
-            ->value(["status"=>2])
+            ->value([
+                "status"=>2,
+                "updated_at"=>date("Y-m-d H:i:s",time())
+            ])
             ->execute();
         return $data;
     }
@@ -216,7 +252,10 @@ class adminUsers extends model
     {
         $data = $this->update(self::$table)
             ->where(['id',$id])
-            ->value(["status"=>1])
+            ->value([
+                "status"=>1,
+                "updated_at"=>date("Y-m-d H:i:s",time())
+            ])
             ->execute();
         return $data;
     }

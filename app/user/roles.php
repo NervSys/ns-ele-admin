@@ -41,7 +41,9 @@ class roles extends factory
      */
     function roles():array
     {
-
+        if(parent::$error){
+            return parent::$error;
+        }
         $res = [
             'code'=>200,
             'msg'=>'成功',
@@ -97,7 +99,9 @@ class roles extends factory
      */
     function routes():array
     {
-
+        if(parent::$error){
+            return parent::$error;
+        }
         $res = [
             'code'=>200,
             'msg'=>'成功',
@@ -134,6 +138,9 @@ class roles extends factory
      */
     public function add(string $info,string $name,string $sulg,array $routes):array
     {
+        if(parent::$error){
+            return parent::$error;
+        }
         $res = [
             'code'=>200,
             'msg'=>'成功',
@@ -193,6 +200,9 @@ class roles extends factory
      */
     public function update(int $id,string $info,string $name,array $routes)
     {
+        if(parent::$error){
+            return parent::$error;
+        }
         $res = [
             'code'=>200,
             'msg'=>'成功',
@@ -233,6 +243,9 @@ class roles extends factory
      */
     public function delete(int $id)
     {
+        if(parent::$error){
+            return parent::$error;
+        }
         $res = [
             'code'=>200,
             'msg'=>'成功',

@@ -6,12 +6,6 @@ Vue.use(Router)
 /* Layout */
 import Layout from '@/layout'
 
-/* Router Modules */
-import componentsRouter from './modules/components'
-import chartsRouter from './modules/charts'
-import tableRouter from './modules/table'
-import nestedRouter from './modules/nested'
-
 /**
  * Note: sub-menu only appear when route children.length >= 1
  * Detail see: https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html
@@ -95,6 +89,7 @@ export const constantRoutes = [
       }
     ]
   },
+
   {
     path: '/profile',
     component: Layout,
@@ -134,6 +129,15 @@ export const asyncRoutes = [
         name: '角色管理',
         meta: {
           title: '角色管理',
+          roles: ['admin']
+        }
+      },
+      {
+        path: 'administrator',
+        component: () => import('@/views/permission/administrator'),
+        name: '管理员',
+        meta: {
+          title: '管理员',
           roles: ['admin']
         }
       }

@@ -97,6 +97,7 @@ class system
     protected static $init = [];
     protected static $load = [];
     protected static $path = [];
+    protected static $domain = [];
 
     //Parsed cmd & params
     protected static $cmd_cgi   = [];

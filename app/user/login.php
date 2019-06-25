@@ -102,13 +102,18 @@ class login extends factory
             /*删除不能暴露的参数*/
 
             $loginUser['created_at'] = substr($loginUser['created_at'],0,10);
+            /* 设置条件 */
+            $where = [];
+            $where[] = ["status",1];
+            $where[] = ["id","in",explode(",",$loginUser['role_id'])];
+
             /*获取用户的角色信息*/
-            $role = adminRole::new()->getFirst($loginUser['role_id']);
-            if(empty($role)){
+            $roles = adminRole::new()->getData($where);
+            if(empty($roles)){
                 mine::new()->abortMy(40030);
             }
 
-            $loginUser2['roles'] = [$role['sulg']];
+            $loginUser2['roles'] = array_column($roles,"sulg");
             $loginUser2['avatar'] = $loginUser['logo'];
             $loginUser2['introduction'] = $loginUser['name'];
             $loginUser2['name'] = $loginUser['name'];

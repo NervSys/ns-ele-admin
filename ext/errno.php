@@ -71,7 +71,7 @@ class errno
         $error = self::get($code, $errno);
         $keys  = array_keys($error);
 
-        //Overwrite system error pool
+        //Overwrite system error POOL
         foreach ($keys as $key) {
             system::$error[$key] = $error[$key];
         }
@@ -92,9 +92,9 @@ class errno
         return [
             'code'    => &$code,
             'errno'   => &$errno,
-            'message' => isset(self::$pool[$code])
+            'msg' => isset(self::$pool[$code])
                 ? (self::$lang ? gettext(self::$pool[$code]) : self::$pool[$code])
-                : 'Error message NOT found!'
+                : '未获得权限'
         ];
     }
 }

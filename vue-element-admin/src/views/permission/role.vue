@@ -85,10 +85,6 @@ export default {
       dialogVisible: false,
       dialogType: 'new',
       checkStrictly: false,
-      defaultProps: {
-        children: 'children',
-        label: 'title'
-      },
       deleteRolePost: {
         id: ''
       },

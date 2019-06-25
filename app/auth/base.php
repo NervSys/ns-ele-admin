@@ -8,6 +8,7 @@
 namespace app\auth;
 
 use app\model\adminPermission;
+use app\model\adminRole;
 use app\model\adminUsers;
 use app\model\logs;
 use app\redis\redisCache;
@@ -97,6 +98,8 @@ class base extends factory
                 self::$newUserInfo = $userData;
                 /*初始化权限*/
                 if (empty(self::$Permission)) self::instantiationPermission();
+                /* 检测用户权限 */
+                self::checkAuth();
             }else{
                 logs::new()->myLog('授权时未发现用户'.$token);
                 errno::set(40002,40002);
@@ -104,6 +107,36 @@ class base extends factory
         }
     }
 
+    /**
+     * 检测权限
+     */
+    private static function checkAuth()
+    {
+        /* 切割请求路径 */
+        $pathUrl = explode("/",self::$cmd);
+        /* 分割action */
+        $action = explode("-",$pathUrl[1]);
+
+        if (isset(self::$Permission[$action[0].'_'.$action[1]])){
+            $permissionSulg = self::$Permission[$action[0].'_'.$action[1]];
+            /* 获取当前用户的权限值 */
+            $where = [];
+            $where[] = ["status",1];
+            $where[] = ["id","in",explode(",",self::$newUserInfo['role_id'])];
+            /*获取用户的角色信息*/
+            $roles = adminRole::new()->getData($where);
+            $scoreArray = array_column($roles,"score");
+            $maxScore = max($scoreArray);
+
+            if($maxScore & $permissionSulg->authValue){
+
+            }else{
+                errno::set(40039,40039);
+            }
+        }
+
+
+    }
     /**
      * 用户登录之后实例化权限
      */

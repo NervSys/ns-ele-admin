@@ -62,6 +62,7 @@ class mine extends factory
             40036=> "兑换失败,请联系相关客服",
             40037=> "账号只能由数字英文字符组成，不小于6个单位或大于20个单位",
             40038=> "角色标志只能由英文字符组成，不小于4个单位或大于20个单位",
+            40039=> "未获得权限",
         ];
 
         return $msg[$code];
@@ -543,5 +544,28 @@ class mine extends factory
         return $sexString;
     }
 
+    /**
+     * 删除二维数组的指定key
+     * @param array $arr
+     * @param string $key
+     * @return array
+     */
+    public function delTwoArrayKey(array &$arr,array $keys):array
+    {
+        foreach ($arr as $k=>$v1){
+            foreach ($keys as $v2){
+                unset($arr[$k][$v2]);
+            }
+        }
+        return $arr;
+    }
 
+    public function stringToIntArray(array &$array)
+    {
+        foreach ($array as $key=>$value){
+            $array[$key] = intval($value);
+        }
+
+        return $array;
+    }
 }
