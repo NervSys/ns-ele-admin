@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard-editor-container">
 
-    <panel-group @handleSetLineChartData="handleSetLineChartData" />
+    <panel-group/>
     <div class="block" style="background:#fff;margin-bottom:32px;">
       <el-date-picker
               v-model="value2"
@@ -110,9 +110,7 @@ export default {
     }
   },
   methods: {
-    handleSetLineChartData(type) {
-      this.lineChartData = lineChartData[type]
-    }
+
   }
 }
 </script>
