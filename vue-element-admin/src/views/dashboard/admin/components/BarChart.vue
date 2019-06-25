@@ -47,6 +47,9 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
+        title: {
+          text: '项目热度'
+        },
         tooltip: {
           trigger: 'axis',
           axisPointer: { // 坐标轴指示器，坐标轴触发有效
@@ -74,25 +77,11 @@ export default {
           }
         }],
         series: [{
-          name: 'pageA',
+          name: '关注量',
           type: 'bar',
           stack: 'vistors',
           barWidth: '60%',
           data: [79, 52, 200, 334, 390, 330, 220],
-          animationDuration
-        }, {
-          name: 'pageB',
-          type: 'bar',
-          stack: 'vistors',
-          barWidth: '60%',
-          data: [80, 52, 200, 334, 390, 330, 220],
-          animationDuration
-        }, {
-          name: 'pageC',
-          type: 'bar',
-          stack: 'vistors',
-          barWidth: '60%',
-          data: [30, 52, 200, 334, 390, 330, 220],
           animationDuration
         }]
       })

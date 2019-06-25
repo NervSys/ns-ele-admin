@@ -45,6 +45,9 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
+        title: {
+          text: '项目投资'
+        },
         tooltip: {
           trigger: 'item',
           formatter: '{a} <br/>{b} : {c} ({d}%)'
@@ -56,7 +59,7 @@ export default {
         },
         series: [
           {
-            name: 'WEEKLY WRITE ARTICLES',
+            name: '总投资占比',
             type: 'pie',
             roseType: 'radius',
             radius: [15, 95],

@@ -1,9 +1,19 @@
 <template>
   <div class="dashboard-editor-container">
-    <github-corner class="github-corner" />
 
     <panel-group @handleSetLineChartData="handleSetLineChartData" />
-
+    <div class="block" style="background:#fff;margin-bottom:32px;">
+      <el-date-picker
+              v-model="value2"
+              type="datetimerange"
+              :picker-options="pickerOptions"
+              range-separator="至"
+              start-placeholder="开始日期"
+              end-placeholder="结束日期"
+              align="right">
+      </el-date-picker>
+      <el-button type="primary" icon="el-icon-search">搜索</el-button>
+    </div>
     <el-row style="background:#fff;padding:16px 16px 0;margin-bottom:32px;">
       <line-chart :chart-data="lineChartData" />
     </el-row>
@@ -25,18 +35,6 @@
         </div>
       </el-col>
     </el-row>
-
-    <el-row :gutter="8">
-      <el-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 12}" :xl="{span: 12}" style="padding-right:8px;margin-bottom:30px;">
-        <transaction-table />
-      </el-col>
-      <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 6}" :xl="{span: 6}" style="margin-bottom:30px;">
-        <todo-list />
-      </el-col>
-      <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 6}" :xl="{span: 6}" style="margin-bottom:30px;">
-        <box-card />
-      </el-col>
-    </el-row>
   </div>
 </template>
 
@@ -47,9 +45,6 @@ import LineChart from './components/LineChart'
 import RaddarChart from './components/RaddarChart'
 import PieChart from './components/PieChart'
 import BarChart from './components/BarChart'
-import TransactionTable from './components/TransactionTable'
-import TodoList from './components/TodoList'
-import BoxCard from './components/BoxCard'
 
 const lineChartData = {
   newVisitis: {
@@ -78,14 +73,40 @@ export default {
     LineChart,
     RaddarChart,
     PieChart,
-    BarChart,
-    TransactionTable,
-    TodoList,
-    BoxCard
+    BarChart
   },
   data() {
     return {
-      lineChartData: lineChartData.newVisitis
+      lineChartData: lineChartData.newVisitis,
+      pickerOptions: {
+        shortcuts: [{
+          text: '最近一周',
+          onClick(picker) {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
+            picker.$emit('pick', [start, end]);
+          }
+        }, {
+          text: '最近一个月',
+          onClick(picker) {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
+            picker.$emit('pick', [start, end]);
+          }
+        }, {
+          text: '最近三个月',
+          onClick(picker) {
+            const end = new Date();
+            const start = new Date();
+            start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
+            picker.$emit('pick', [start, end]);
+          }
+        }]
+      },
+      value1: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
+      value2: ''
     }
   },
   methods: {

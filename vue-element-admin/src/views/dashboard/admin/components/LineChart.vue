@@ -63,6 +63,9 @@ export default {
     },
     setOptions({ expectedData, actualData } = {}) {
       this.chart.setOption({
+        title: {
+          text: '资金流转'
+        },
         xAxis: {
           data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
           boundaryGap: false,
@@ -90,10 +93,10 @@ export default {
           }
         },
         legend: {
-          data: ['expected', 'actual']
+          data: ['充值', '返现']
         },
         series: [{
-          name: 'expected', itemStyle: {
+          name: '充值', itemStyle: {
             normal: {
               color: '#FF005A',
               lineStyle: {
@@ -109,7 +112,7 @@ export default {
           animationEasing: 'cubicInOut'
         },
         {
-          name: 'actual',
+          name: '返现',
           smooth: true,
           type: 'line',
           itemStyle: {
