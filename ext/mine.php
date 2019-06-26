@@ -222,7 +222,7 @@ class mine extends factory
      * @param int $number
      * @return array
      */
-    public function SolsticeNowDate(int $number = 7):array
+    public function solsticeNowDate(int $number = 7):array
     {
         $time = time()-(3600*24*$number); // 格式化时间
 
@@ -232,6 +232,21 @@ class mine extends factory
         return $array;
     }
 
+    /**
+     * 获取两个日期直接的date数组
+     * @param $endDate
+     * @param $starDate
+     * @return array
+     */
+    public function solsticeDate($endDate,$starDate):array
+    {
+        $number = intval(($endDate - $starDate) / 3600 / 24);
+        $array = [];
+        for($i=0;$i<$number;$i++) {
+            $array[] = date('Y-m-d', $starDate + $i * 86400); //每隔一天赋值给数组
+        }
+        return $array;
+    }
 
     /**
      * pwd key生成
@@ -560,6 +575,11 @@ class mine extends factory
         return $arr;
     }
 
+    /**
+     * string 数组值，转int 数组值
+     * @param array $array
+     * @return array
+     */
     public function stringToIntArray(array &$array)
     {
         foreach ($array as $key=>$value){
@@ -567,5 +587,33 @@ class mine extends factory
         }
 
         return $array;
+    }
+
+    /**
+     * 数组交叉赋值，主要用户图表的统计
+     * @param array $date
+     * @param array $datas
+     * @param string $key
+     * @param string $value
+     * @return array
+     */
+    public function chart(array $date,array $datas,string $key,string $value):array
+    {
+        $arr3 = [];
+        foreach ($date as $k=>$v){
+            if(empty($datas)){
+                $arr3[$k] = 0;
+            }else{
+                foreach ($datas as $k2=>$v2){
+                    if($v == $v2[$key]){
+                        $arr3[$k] = $v2[$value];
+                        break;
+                    }else{
+                        $arr3[$k] = 0;
+                    }
+                }
+            }
+        }
+        return $arr3;
     }
 }

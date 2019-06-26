@@ -27,7 +27,7 @@ export default {
       default: true
     },
     chartData: {
-      type: Object,
+      type: null,
       required: true
     }
   },
@@ -61,13 +61,13 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
       this.setOptions(this.chartData)
     },
-    setOptions({ expectedData, actualData } = {}) {
+    setOptions({ runningWatersEnterData, runningWatersOutflowData,datetime = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] } = {}) {
       this.chart.setOption({
         title: {
           text: '资金流转'
         },
         xAxis: {
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: datetime,
           boundaryGap: false,
           axisTick: {
             show: false
@@ -93,7 +93,7 @@ export default {
           }
         },
         legend: {
-          data: ['充值', '返现']
+          data: ['充值', '提现']
         },
         series: [{
           name: '充值', itemStyle: {
@@ -107,12 +107,12 @@ export default {
           },
           smooth: true,
           type: 'line',
-          data: expectedData,
+          data: runningWatersEnterData,
           animationDuration: 2800,
           animationEasing: 'cubicInOut'
         },
         {
-          name: '返现',
+          name: '提现',
           smooth: true,
           type: 'line',
           itemStyle: {
@@ -127,7 +127,7 @@ export default {
               }
             }
           },
-          data: actualData,
+          data: runningWatersOutflowData,
           animationDuration: 2800,
           animationEasing: 'quadraticOut'
         }]

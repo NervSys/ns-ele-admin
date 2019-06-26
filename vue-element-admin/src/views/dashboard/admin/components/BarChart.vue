@@ -23,11 +23,23 @@ export default {
     height: {
       type: String,
       default: '300px'
+    },
+    chartData: {
+      type: null,
+      required: true
     }
   },
   data() {
     return {
       chart: null
+    }
+  },
+  watch: {
+    chartData: {
+      deep: true,
+      handler(val) {
+        this.setOptions(val)
+      }
     }
   },
   mounted() {
@@ -45,10 +57,12 @@ export default {
   methods: {
     initChart() {
       this.chart = echarts.init(this.$el, 'macarons')
-
+      this.setOptions(this.chartData)
+    },
+    setOptions({ crowdfundingsType=['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], crowdfundingsMoneys } = {}) {
       this.chart.setOption({
         title: {
-          text: '项目热度'
+          text: '项目额度'
         },
         tooltip: {
           trigger: 'axis',
@@ -65,7 +79,7 @@ export default {
         },
         xAxis: [{
           type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: crowdfundingsType,
           axisTick: {
             alignWithLabel: true
           }
@@ -77,11 +91,11 @@ export default {
           }
         }],
         series: [{
-          name: '关注量',
+          name: '总额',
           type: 'bar',
           stack: 'vistors',
           barWidth: '60%',
-          data: [79, 52, 200, 334, 390, 330, 220],
+          data: crowdfundingsMoneys,
           animationDuration
         }]
       })
