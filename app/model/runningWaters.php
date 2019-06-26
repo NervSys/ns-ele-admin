@@ -59,4 +59,20 @@ class runningWaters extends model
         $data = $this->query($sql);
         return $data;
     }
+    /**
+     * 获取平台认筹金额
+     * @return int
+     */
+    public function getRecruitMoney():int
+    {
+        $data = $this->select(self::$table)
+            ->where([["type","认筹"],["status",1]])
+            ->fetch();
+        /* 如果还没有认筹记录，返回0 */
+        if (empty($data)) return 0;
+        /* 对数据进行二维到一维转换，取出money */
+        $moneys = array_column($data,"money");
+        /* 进行金额计算并且返回 */
+        return array_sum($moneys);
+    }
 }

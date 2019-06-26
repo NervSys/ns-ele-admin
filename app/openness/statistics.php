@@ -48,6 +48,9 @@ class statistics extends factory
             $starDate =  date('Y-m-d 00:00:00',$startString);
             $endDate =  date('Y-m-d 23:59:59',$endString);
 
+            $runningWatersModel = runningWaters::new();
+
+
             $solsticeDateData = mine::new()->solsticeDate($endString,$startString);
             /* 获取用户数量 */
             $getTotal = clients::new()->getTotal();
@@ -57,13 +60,13 @@ class statistics extends factory
             $crowdfundingsNumber = $crowdfundingsModel->getTotal();
             /* 获取认筹金额 */
             $investmentRecordsModel = investmentRecords::new();
-            $winvestmentRecordsMoney = $investmentRecordsModel->getRecruitMoney();
+            $winvestmentRecordsMoney = $runningWatersModel->getRecruitMoney();
             /* 认筹数量 */
             $winvestmentRecordsNumber = $investmentRecordsModel->getTotal();
 
             /* 进行图表数据统计 */
             /* 充值 */
-            $runningWatersModel = runningWaters::new();
+
             $runningWatersEnterData = $runningWatersModel->enter($starDate,$endDate);
             $res['data']["runningWatersEnterData"] = mine::new()->chart($solsticeDateData,$runningWatersEnterData,"date","number");
             /* 提现 */
