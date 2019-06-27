@@ -1,8 +1,8 @@
 import request from '@/utils/request'
-
+import domain from '@/utils/domain.js'
 export function searchUser(name) {
   return request({
-    url: '/search/user',
+    url: domain.baseUrl + '?c=openness/news-user',
     method: 'get',
     params: { name }
   })

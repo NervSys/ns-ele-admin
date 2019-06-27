@@ -7,7 +7,7 @@
       :on-success="handleImageSuccess"
       class="image-uploader"
       drag
-      action="https://httpbin.org/post"
+      :action="uploadUrl"
     >
       <i class="el-icon-upload" />
       <div class="el-upload__text">
@@ -35,7 +35,7 @@
 
 <script>
 import { getToken } from '@/api/qiniu'
-
+import uploadLogoUrl from '@/utils/domain.js'
 export default {
   name: 'SingleImageUpload3',
   props: {
@@ -47,7 +47,8 @@ export default {
   data() {
     return {
       tempUrl: '',
-      dataObj: { token: '', key: '' }
+      dataObj: { token: '', key: '' },
+      uploadUrl: uploadLogoUrl.uploadLogoUrl
     }
   },
   computed: {

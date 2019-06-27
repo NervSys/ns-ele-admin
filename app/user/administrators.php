@@ -209,7 +209,7 @@ class administrators extends factory
 
 
             if(strlen($pwd) < 6 || strlen($pwd) > 20) mine::new()->abortMy(40008);
-            if(!strpos($logo,"ttp:")) $logo = "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif";;
+            if(!strpos($logo,"ttp:")) $logo = "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif";
             if(mine::new()->isMobile($phone) == false) mine::new()->abortMy(40022);
 
             if(mine::new()->isEmail($email) === false) mine::new()->abortMy(40006);
@@ -286,6 +286,7 @@ class administrators extends factory
                 mine::new()->abortMy(40023);
             }
             $res['logo'] = self::$domain['domain'].'/upload/'.$data['name'];
+            $res['files']["file"] = self::$domain['domain'].'/upload/'.$data['name'];
         }catch (\Exception $e){
             $res['code'] = $e->getCode();
             $res['msg'] = $e->getMessage();

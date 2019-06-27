@@ -176,6 +176,42 @@ export const asyncRoutes = [
       }
     ]
   },
+  {
+    path: '/video',
+    component: Layout,
+    redirect: '/video/list',
+    name: '视频中心',
+    meta: {
+      title: '视频中心',
+      icon: 'eye-open'
+    },
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/video/list'),
+        name: '视频列表',
+        meta: { title: '视频列表', icon: 'eye-open' }
+      }
+    ]
+  },
+  {
+    path: '/recipe',
+    component: Layout,
+    redirect: '/recipe/list',
+    name: '食谱中心',
+    meta: {
+      title: '食谱中心',
+      icon: 'recipe'
+    },
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/recipe/list'),
+        name: '食谱列表',
+        meta: { title: '食谱列表', icon: 'recipe' }
+      }
+    ]
+  },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]

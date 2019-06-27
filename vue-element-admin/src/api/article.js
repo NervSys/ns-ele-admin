@@ -1,8 +1,8 @@
 import request from '@/utils/request'
-
+import domain from '@/utils/domain.js'
 export function fetchList(query) {
   return request({
-    url: '/article/list',
+    url: domain.baseUrl + '?c=openness/news-list',
     method: 'get',
     params: query
   })
@@ -10,23 +10,23 @@ export function fetchList(query) {
 
 export function fetchArticle(id) {
   return request({
-    url: '/article/detail',
+    url: domain.baseUrl + '?c=openness/news-detail',
     method: 'get',
     params: { id }
   })
 }
 
-export function fetchPv(pv) {
+export function fetchStatus(data) {
   return request({
-    url: '/article/pv',
-    method: 'get',
-    params: { pv }
+    url: domain.baseUrl + '?c=openness/news-status',
+    method: 'post',
+    data
   })
 }
 
 export function createArticle(data) {
   return request({
-    url: '/article/create',
+    url: domain.baseUrl + '?c=openness/news-create',
     method: 'post',
     data
   })
@@ -34,7 +34,7 @@ export function createArticle(data) {
 
 export function updateArticle(data) {
   return request({
-    url: '/article/update',
+    url: domain.baseUrl + '?c=openness/news-update',
     method: 'post',
     data
   })
