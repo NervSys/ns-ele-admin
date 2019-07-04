@@ -10,7 +10,7 @@ use ext\mine;
  * Class user
  * @package word
  */
-class roles extends factory
+class now extends factory
 {
     public static $tz = [
         'roles'=>[
