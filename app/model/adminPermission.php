@@ -2,7 +2,6 @@
 namespace app\model;
 
 use app\library\model;
-use ext\mine;
 
 /**
  * 权限表
@@ -24,7 +23,7 @@ class adminPermission extends model
             ->where($where)
             ->field("id,created_at,name,model_name,control_real_name")
             ->fetch();
-        if(empty($data)) mine::new()->myLog("获取权限失败",'permission');
+        if(empty($data)) logs::new()->myLog("获取权限失败",'permission');
         return $data;
     }
 

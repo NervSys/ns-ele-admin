@@ -3,6 +3,7 @@ namespace app\user;
 
 use app\model\adminRole;
 use app\model\adminUsers;
+use app\model\logs;
 use core\handler\factory;
 use ext\mine;
 use ext\upload;
@@ -168,7 +169,7 @@ class administrators extends factory
                 $email
             );
             if($data === false){
-                mine::new()->myLog("添加用户失败",'administrators');
+                logs::new()->myLog("添加用户失败",'administrators');
                 mine::new()->abortMy(404);
             }
 
@@ -225,7 +226,7 @@ class administrators extends factory
                 $email
             );
             if($data === false){
-                mine::new()->myLog("修改失败",'administrators');
+                logs::new()->myLog("修改失败",'administrators');
                 mine::new()->abortMy(404);
             }
         }catch (\Exception $e){

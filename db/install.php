@@ -6,11 +6,8 @@
  * Time: 下午 14:27
  */
 namespace db;
-use app\model\log;
-use app\model\logs;
 use ext\file;
 use app\library\model;
-use ext\mine;
 
 class install extends model
 {
